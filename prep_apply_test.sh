@@ -34,14 +34,14 @@ sudo salt-key -A -y
 
 sleep 10
 echo "Apply nginx sls state as matched in top.sls."
-salt '*' state.apply
+sudo salt '*' state.apply
 
 echo "Run simple tests."
-salt '*' ps.pkill "python3 -u -m http.server 3400" full=true signal=9 || true
+sudo salt '*' ps.pkill "python3 -u -m http.server 3400" full=true signal=9 || true
 
 sudo mkdir -p /srv/www
-salt '*' cmd.run 'echo "hello" > /srv/www/index.html'
-salt '*' cmd.run 'cd /srv/www; python3 -u -m http.server 3400 >>http.log 2>&1 &'
+sudo salt '*' cmd.run 'echo "hello" > /srv/www/index.html'
+sudo salt '*' cmd.run 'cd /srv/www; python3 -u -m http.server 3400 >>http.log 2>&1 &'
 
 ping -c 4 www.example.com
 
