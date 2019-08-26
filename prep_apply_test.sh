@@ -14,14 +14,14 @@ if grep -q ${test_fqdn} /etc/hosts; then
     echo "The test_fqdn ${test_fqdn} already exists in /etc/hosts."
 else
     echo "Updating /etc/hosts with ${test_fqdn}"
-    sudo sed  -i "/^127.0.0.1/s/$/${test_fqdn}/" /etc/hosts
+    sudo sed  -i "/^127.0.0.1/s/$/ ${test_fqdn}/" /etc/hosts
 fi
 
 if grep -q ${master_hostname} /etc/hosts; then
     echo "The hostname ${master_hostname} already exists in /etc/hosts"
 else
     echo "Updating /etc/hosts with ${master_hostname}"
-    sudo sed  -i "/^127.0.0.1/s/$/${master_hostname}/" /etc/hosts
+    sudo sed  -i "/^127.0.0.1/s/$/ ${master_hostname}/" /etc/hosts
 fi
 
 echo "Install salt master/minion."
