@@ -1,8 +1,15 @@
-# Install and test basic saltstack nginx state for Debian based.
 
-From repo base directory on Ubuntu/Debian system run.
+# Saltstack Example 
+
+Install and test basic saltstack nginx state for Debian based.
+
+# Usage 
+
+On Ubuntu 18.04/Debian 10 base system install run.
 
 ```
+git clone git@github.com:jeremybusk/saltstack-nginx-sls-example.git
+cd saltstack-nginx-sls-example
 cp -r files/* /
 ./prep_apply_test.sh
 ```
