@@ -25,7 +25,7 @@ else
 fi
 
 echo "Install salt master/minion."
-sudo apt-get update
+# sudo apt-get update
 sudo apt-get install -y salt-master salt-minion
 
 sleep 10
