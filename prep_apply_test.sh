@@ -2,7 +2,6 @@
 # Prep host for salt master/minion & apply minion nginx state.
 # This uses limited complexity for demonstration purposes.
 set -e
-apt-get install -y sudo
 
 master_hostname=salt
 minion_hostname=${HOSTNAME}
