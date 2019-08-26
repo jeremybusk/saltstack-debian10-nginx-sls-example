@@ -28,7 +28,7 @@ echo "Install salt master/minion."
 sudo apt-get update || true
 sudo apt-get install -y salt-master salt-minion
 
-sleep 10
+sleep 30
 echo "Accept salt key(s)."
 sudo salt-key -A -y
 
