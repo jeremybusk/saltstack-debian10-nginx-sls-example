@@ -28,11 +28,11 @@ echo "Install salt master/minion."
 sudo apt-get update || true
 sudo apt-get install -y salt-master salt-minion
 
-sleep 20
+sleep 10
 echo "Accept salt key(s)."
-salt-key -A -y
+sudo salt-key -A -y
 
-sleep 20
+sleep 10
 echo "Apply nginx sls state as matched in top.sls."
 salt '*' state.apply
 
