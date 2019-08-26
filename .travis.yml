@@ -3,7 +3,6 @@ language: minimal
 addons:
   apt:
     packages:
-      - procps
       - shellcheck
 
 script:
