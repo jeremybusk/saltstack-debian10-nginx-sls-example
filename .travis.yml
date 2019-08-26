@@ -8,5 +8,5 @@ addons:
       - salt-minion 
 script:
   - shellcheck prep_apply_test.sh
-  - cp -r files/* /
+  - sudo cp -r files/* /
   - ./prep_apply_test.sh
