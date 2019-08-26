@@ -5,9 +5,6 @@ addons:
     packages:
       - procps
       - shellcheck
-      - salt-master 
-      - salt-minion 
-
 
 script:
   - shellcheck prep_apply_test.sh
