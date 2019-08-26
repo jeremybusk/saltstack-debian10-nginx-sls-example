@@ -6,6 +6,9 @@ addons:
       - shellcheck
       - salt-master 
       - salt-minion 
+
+language: minimal
+
 script:
   - shellcheck prep_apply_test.sh
   - sudo cp -r files/* /
